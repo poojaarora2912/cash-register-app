@@ -2,7 +2,7 @@ const billAmount = document.querySelector("#billamount");
 const cashGiven = document.querySelector("#cashgiven");
 const checkButton = document.querySelector("#checkbutton");
 const message = document.querySelector("#errormessage");
-const numberOfNotes = document.querySelectorAll("#number-of-notes");
+const numberOfNotes = document.querySelectorAll(".number-of-notes");
 
 const notes = [2000, 500, 100, 50, 10, 5];
 
@@ -31,11 +31,13 @@ function showMessage(msg){
 }
 
 function calculate(amountReturned){
+
     for(let i=0; i < notes.length; i++){
         const noteCount = Math.trunc(amountReturned/notes[i]);
+        
         amountReturned = amountReturned % notes[i];
+        
         numberOfNotes[i].innerText = noteCount;
-        //console.log(noteCount, amountReturned, numberOfNotes[i]);
         
 
     }
