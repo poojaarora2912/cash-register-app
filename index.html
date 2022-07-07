@@ -8,15 +8,16 @@
     <title>Cash Register App</title>
 </head>
 <body>
+    <div id="container">
     <h1> Cash Register Manager</h1>
-    <h2>enter the amount given by the customer and find out how many notes to return.</h2><br/>
+    <h2>Enter the amount given by the customer and find out how many notes to return.</h2><br/>
     <label for="billamount">Bill amount:</label><br/>
-    <input id="billamount" type="text" placeholder="Enter amount.."/><br/>
+    <input id="billamount" type="number" placeholder="Enter amount.."/><br/>
     <label for="cashgiven">Cash given:</label><br/>
-    <input id="cashgiven" type="text" placeholder="Enter cash given.."/><br/>
-    <p id="errormessage">here</p>
+    <input id="cashgiven" type="number" placeholder="Enter cash given.."/><br/>
+    <p id="errormessage"></p>
     <button id="checkbutton">Check</button>
-    <table id="change">
+    <table id="change" style="text-align:center; margin-left:auto; margin-right:auto; height:50%;">
         <caption>Return Change</caption>
         <tr>
             <td>Number of notes</td>
@@ -40,5 +41,6 @@
         </tr>
     </table>
     <script async src="index.js"></script>
+</div>
 </body>
 </html>

@@ -4,7 +4,7 @@ const checkButton = document.querySelector("#checkbutton");
 const message = document.querySelector("#errormessage");
 const numberOfNotes = document.querySelectorAll(".number-of-notes");
 
-const notes = [2000, 500, 100, 50, 10, 5];
+const notes = [2000, 500, 100, 50, 10, 5, 1];
 
 checkButton.addEventListener("click", validateAmount);
 
