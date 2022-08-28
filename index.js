@@ -10,17 +10,23 @@ checkButton.addEventListener("click", validateAmount);
 
 function validateAmount(){
     hideMessage();
-    if(billAmount.value>0){
-        if(billAmount.value<=cashGiven.value){
-            const amountReturned = cashGiven.value - billAmount.value;
-            calculate(amountReturned);
-        }else{
-            showMessage("You are broke!");
-        }
+    var amountReturned = cashGiven.value - billAmount.value;
+    console.log(billAmount, cashGiven, amountReturned);
+    if(billAmount.value == '' || cashGiven == ''){
+        showMessage("Enter valid values");
+    }else{
+            
+    if (amountReturned == 0) {
+        showMessage("No Return change required ");
+    } else if (amountReturned < 0) {
+        showMessage("Ready to wash the plates ...? ");
+    } else {
+        showMessage("Amount to be returned is ₹" + amountReturned);
+        calculate(amountReturned);
     }
-    else{
-        showMessage("Invalid amount!");
     }
+
+   
 }
 function hideMessage(){
     message.style.display="none";
